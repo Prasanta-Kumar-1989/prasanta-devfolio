@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+  /* Stack navbar into 2 rows */
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* First row: name + theme */
+  .nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+  }
+
+  /* Second row: nav links */
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 8px;
+  }
+
+  .nav-links li {
+    padding: 6px 0;
+  }
+  .projects-list {
+    flex-direction: column;
+  }
+}

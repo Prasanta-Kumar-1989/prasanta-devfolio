@@ -1,0 +1,6 @@
+@media (max-width:768px){
+  .section{padding:60px 0;}
+  .hero-content{padding:80px 0;}
+  .hero-avatar{width:140px;height:140px;}
+  .btn{width:100%;}
+}

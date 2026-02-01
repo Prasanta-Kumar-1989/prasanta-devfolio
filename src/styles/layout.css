@@ -1,0 +1,53 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--card);
+  backdrop-filter: blur(12px);
+}
+
+/* Wrapper */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Top row (name + theme) */
+.nav-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Nav links (desktop row) */
+.nav-links {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero (unchanged) */
+.hero {
+  background: linear-gradient(135deg, var(--primary), #312e81);
+  color: white;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  align-items: center;
+  gap: 40px;
+  padding: 120px 0;
+}
+.min-h-screen {
+  min-height: 70vh;
+}
+.hero-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+}
