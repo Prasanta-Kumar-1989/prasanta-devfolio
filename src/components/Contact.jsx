@@ -4,6 +4,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-10">
       <div className="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-10">
+        {/* LEFT CONTENT */}
         <div>
           <h2 className="text-2xl font-semibold">Contact Me</h2>
 
@@ -32,21 +33,40 @@ export default function Contact() {
             ))}
           </div>
         </div>
-        <form className="space-y-4">
+
+        {/* RIGHT FORM */}
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className="space-y-4"
+        >
+          {/* REQUIRED FOR NETLIFY */}
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
+
           <input
+            name="name"
             className="w-full px-4 py-3 rounded-lg border"
             placeholder="Your Name"
+            required
           />
 
           <input
+            name="email"
+            type="email"
             className="w-full px-4 py-3 rounded-lg border"
             placeholder="Your Email"
+            required
           />
 
           <textarea
+            name="message"
             className="w-full px-4 py-3 rounded-lg border"
             rows="4"
             placeholder="Your Message"
+            required
           />
 
           <button
