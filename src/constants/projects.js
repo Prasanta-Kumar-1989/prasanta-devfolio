@@ -25,7 +25,7 @@ export const ENTERPRISE_PROJECTS = [
       "Tailwind CSS",
     ],
     tools: ["Jenkins", "GitHub Actions", "Git", "JIRA"],
-    nda: true,
+    nda: false,
   },
 
   {
@@ -54,7 +54,7 @@ export const ENTERPRISE_PROJECTS = [
       "Tailwind CSS",
     ],
     tools: ["Jenkins", "GitHub Actions", "Git", "JIRA"],
-    nda: true,
+    nda: false,
   },
   {
     title: "Global Communications Platform",
@@ -79,7 +79,7 @@ export const ENTERPRISE_PROJECTS = [
       "Jenkins",
       "GitHub Actions",
     ],
-    nda: true,
+    nda: false,
   },
 
   {
