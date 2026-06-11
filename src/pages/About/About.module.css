@@ -1,0 +1,141 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 520px) 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+.heroContent {
+  max-width: 520px;
+}
+.heroTitle {
+  font-size: var(--fs-3xl);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.heroTitle span {
+  color: var(--green);
+}
+.heroText {
+  font-size: var(--fs-base);
+  color: var(--text2);
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.statsCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px 20px;
+  text-align: center;
+}
+.statsValue {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+.statsLabel {
+  font-size: var(--fs-sm);
+  color: var(--text3);
+  margin-top: 2px;
+}
+.sectionHeading {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text3);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.whatGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.whatCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  text-align: center;
+}
+.whatIcon {
+  font-size: var(--fs-2xl);
+  margin-bottom: 8px;
+}
+.whatTitle {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.whatDesc {
+  font-size: var(--fs-sm);
+  color: var(--text3);
+}
+.strengthsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+}
+.strengthItem {
+  margin-bottom: 14px;
+}
+.strengthLabelRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: var(--fs-sm);
+  color: var(--text2);
+}
+.strengthBar {
+  height: 3px;
+  background: var(--bg3);
+  border-radius: 2px;
+}
+.strengthFill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 2px;
+}
+
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .whatGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .strengthsGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .heroTitle {
+    font-size: var(--fs-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .whatGrid {
+    grid-template-columns: 1fr;
+  }
+}

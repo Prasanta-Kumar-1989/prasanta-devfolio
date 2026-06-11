@@ -1,0 +1,105 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pageTitle {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.caseGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.caseCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.caseHeader {
+  padding: 18px;
+}
+.caseClient {
+  font-size: var(--fs-sm);
+  color: var(--green);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.caseTitle {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.casePreview {
+  height: 130px;
+  background: var(--bg3);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-sm);
+  color: var(--text3);
+}
+.caseBody {
+  padding: 18px;
+}
+.caseSection {
+  margin-bottom: 12px;
+}
+.caseSectionTitle {
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.caseSectionText {
+  font-size: var(--fs-sm);
+  color: var(--text2);
+}
+.caseMetricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.caseMetric {
+  text-align: center;
+  padding: 10px 6px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.caseMetricValue {
+  font-size: var(--fs-md);
+  font-weight: 700;
+}
+.caseMetricLabel {
+  font-size: var(--fs-xs);
+  color: var(--text3);
+  margin-top: 2px;
+}
+.caseButton {
+  font-size: var(--fs-sm);
+  color: var(--green);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .caseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .caseMetricsGrid {
+    grid-template-columns: 1fr;
+  }
+}

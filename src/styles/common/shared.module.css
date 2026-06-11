@@ -1,0 +1,393 @@
+/* ── Page layout ── */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pageWide {
+  gap: 24px;
+}
+
+.pageWrapper {
+  padding-bottom: 40px;
+}
+
+/* ── Typography ── */
+.pageTitle {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.pageTitleLg {
+  margin-bottom: 20px;
+}
+
+.pageDesc {
+  font-size: var(--fs-base);
+  color: var(--text2);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.sectionHeading {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text3);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.featureLabel {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text2);
+  text-transform: uppercase;
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardInteractive {
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+/* ── Metrics ── */
+.metricCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.metricValue {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--green);
+}
+
+.metricValueSm {
+  font-size: var(--fs-xl);
+}
+
+.metricLabel {
+  font-size: var(--fs-sm);
+  color: var(--text3);
+  margin-top: 4px;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.metricsGridCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Buttons ── */
+.primaryButton {
+  padding: 10px 20px;
+  background: var(--green);
+  border: none;
+  border-radius: 20px;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--on-green);
+  cursor: pointer;
+}
+
+.secondaryButton {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--text2);
+  cursor: pointer;
+}
+
+.linkButton {
+  font-size: var(--fs-sm);
+  color: var(--green);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.externalLink {
+  font-size: var(--fs-sm);
+  color: var(--green-dim);
+  font-weight: 600;
+}
+
+/* ── Project cards ── */
+.projectClient {
+  font-size: var(--fs-sm);
+  color: var(--green-dim);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.projectName {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.projectDesc {
+  font-size: var(--fs-base);
+  color: var(--text2);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.projectView {
+  font-size: var(--fs-sm);
+  color: var(--green-dim);
+  font-weight: 600;
+}
+
+/* ── Lists & bullets ── */
+.bulletRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: var(--fs-base);
+  color: var(--text2);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.bulletMarker {
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.highlightBox {
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+}
+
+.highlightTitle {
+  font-size: var(--fs-sm);
+  color: var(--text3);
+  margin-bottom: 8px;
+}
+
+/* ── Stats grid ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.statsCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.statsValue {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+
+.statsLabel {
+  font-size: var(--fs-sm);
+  color: var(--text3);
+  margin-top: 4px;
+}
+
+/* ── Strength bars ── */
+.strengthItem {
+  margin-bottom: 14px;
+}
+
+.strengthLabelRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: var(--fs-base);
+  color: var(--text2);
+}
+
+.strengthPct {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.strengthBar {
+  height: 4px;
+  background: var(--bg3);
+  border-radius: 2px;
+}
+
+.strengthFill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 2px;
+}
+
+/* ── Forms ── */
+.formInput {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 11px 12px;
+  color: var(--text);
+  font-size: var(--fs-base);
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+
+.formTextarea {
+  composes: formInput;
+  resize: vertical;
+}
+
+.formLabel {
+  font-size: var(--fs-sm);
+  color: var(--text3);
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 600;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.formField {
+  margin-bottom: 12px;
+}
+
+.formFieldLg {
+  margin-bottom: 16px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 13px;
+  background: var(--green);
+  border: none;
+  border-radius: 4px;
+  color: var(--on-green);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.formStatus {
+  text-align: center;
+  font-size: var(--fs-base);
+  margin-top: 10px;
+}
+
+.formStatusSuccess {
+  color: var(--green);
+}
+
+.formStatusError {
+  color: #ff6b6b;
+}
+
+/* ── Filter tabs ── */
+.filterTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filterTab {
+  padding: 7px 16px;
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text3);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filterTabActive {
+  border-color: var(--green);
+  color: var(--green-dim);
+  background: var(--green-muted);
+}
+
+/* ── Feature header ── */
+.featureHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .metricsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pageTitle {
+    font-size: var(--fs-xl);
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+}
