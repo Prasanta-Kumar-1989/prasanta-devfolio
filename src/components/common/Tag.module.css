@@ -1,0 +1,18 @@
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  margin: 2px 4px 2px 0;
+}
+
+.default {
+  border: 1px solid var(--border2);
+  color: var(--text2);
+}
+
+.green {
+  border: 1px solid var(--green-dim);
+  color: var(--green-dim);
+}

@@ -1,0 +1,98 @@
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.statCard {
+  text-align: center;
+  padding: 24px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.statIcon {
+  font-size: var(--fs-xl);
+  margin-bottom: 8px;
+  color: var(--green);
+}
+
+.statNum {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--green);
+}
+
+.statLabel {
+  font-size: var(--fs-sm);
+  color: var(--text3);
+  margin-top: 4px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.panel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.panelTitle {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: var(--fs-sm);
+  color: var(--text2);
+  margin-bottom: 10px;
+}
+
+.impactItem {
+  composes: listItem;
+  margin-bottom: 8px;
+}
+
+.activityBox {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.activityTitle {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+
+.activityText {
+  font-size: var(--fs-sm);
+  color: var(--text2);
+}
+
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid,
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}

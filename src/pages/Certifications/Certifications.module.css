@@ -1,0 +1,61 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pageTitle {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.certCard {
+  background: var(--bg2);
+  border-radius: 6px;
+  overflow: hidden;
+  border-top: 3px solid var(--green);
+}
+.certBody {
+  padding: 16px;
+}
+.certBadge {
+  width: 32px;
+  height: 32px;
+  background: var(--bg3);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: var(--fs-md);
+}
+.certName {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.certIssuer {
+  font-size: var(--fs-sm);
+  color: var(--text2);
+  margin-bottom: 6px;
+}
+.certDate {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .certGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .certGrid {
+    grid-template-columns: 1fr;
+  }
+}

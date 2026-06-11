@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 16px;
+}
+
+.code {
+  font-size: var(--fs-display);
+  font-weight: 800;
+  color: var(--green);
+}
+
+.title {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+}
+
+.description {
+  font-size: var(--fs-base);
+  color: var(--text2);
+}
+
+.button {
+  margin-top: 8px;
+}
