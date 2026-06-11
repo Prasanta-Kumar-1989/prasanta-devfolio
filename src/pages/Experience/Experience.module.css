@@ -55,10 +55,18 @@
   font-weight: 700;
   margin-bottom: 4px;
 }
+.detailMeta {
+  margin-bottom: 16px;
+}
 .detailCompany {
   font-size: var(--fs-sm);
   color: var(--text2);
-  margin-bottom: 16px;
+  margin-bottom: 4px;
+}
+.detailProject {
+  font-size: var(--fs-sm);
+  color: var(--text3);
+  font-weight: 600;
 }
 .bulletRow {
   display: flex;

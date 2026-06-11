@@ -35,7 +35,12 @@ export default function Experience() {
         <div className={styles.detailPanel}>
           <div className={styles.detailDate}>{exp.date}</div>
           <div className={styles.detailTitle}>{exp.title}</div>
-          <ClientLabel client={exp.company} className={styles.detailCompany} />
+          <div className={styles.detailMeta}>
+            <ClientLabel client={exp.company} className={styles.detailCompany} />
+            {exp.project && (
+              <div className={styles.detailProject}>Project: {exp.project}</div>
+            )}
+          </div>
           {exp.bullets.map((b, i) => (
             <div key={i} className={shared.bulletRow}>
               <span className={shared.bulletMarker}>•</span> {b}
