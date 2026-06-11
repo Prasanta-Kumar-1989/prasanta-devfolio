@@ -56,9 +56,11 @@ SUMMARY
 Senior Frontend Engineer with 8+ years experience building enterprise React applications for Fortune 1 companies.
 
 EXPERIENCE
-- Senior Software Engineer | RedSelf Infotech (Client: Walmart) | Apr 2025 – Jan 2026
-- Senior Associate Technology | Prime Focus (Client: AmEx) | Aug 2024 – Feb 2025
-- Lead Frontend Developer | Prime Focus Technologies | Oct 2018 – Aug 2024
+- Senior Software Engineer | Redolent Infotech (Client: Walmart Global Tech) | Apr 2025 – Jan 2026
+- Senior Associate Technology | Synechron Technologies (Client: American Express) | Aug 2024 – Feb 2025
+- Lead Frontend Developer | Infobahn Softworld (Client: Walmart Global Tech) | Oct 2018 – Aug 2024
+- Web / UI Developer | US Tech Solutions (Client: Prime Focus Technologies) | Apr 2018 – Oct 2018
+- UI Developer | Datamatics Global Services (Client: Born Group) | Nov 2017 – Apr 2018
 
 SKILLS: React, TypeScript, GraphQL, Redux, Node.js, Tailwind CSS, MongoDB, Jest`;
 

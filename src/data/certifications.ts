@@ -3,6 +3,7 @@ export interface Certification {
   issuer: string;
   date: string;
   accent: string;
+  logo: string;
 }
 
 export const certificationsCopy = {
@@ -11,12 +12,81 @@ export const certificationsCopy = {
 };
 
 export const certifications: Certification[] = [
-  { name: "React Developer Certificate", issuer: "LearnSite.ai", date: "Feb 2026", accent: "var(--green)" },
-  { name: "Cursor AI Fundamentals", issuer: "Cursor AI", date: "Mar 2026", accent: "var(--blue)" },
-  { name: "Advanced React Enterprise", issuer: "Udemy", date: "Jan 2025", accent: "var(--orange)" },
-  { name: "GitLab CI/CD & DevOps for Beginners", issuer: "GitLab", date: "Jan 2025", accent: "var(--purple)" },
-  { name: "70+ JS Challenges, DSA", issuer: "Udemy", date: "Jan 2025", accent: "var(--yellow)" },
-  { name: "JavaScript Marathon Series", issuer: "Various", date: "Jan 2025", accent: "var(--green)" },
-  { name: "React with Redux", issuer: "Synchem (Coursera)", date: "Jan 2025", accent: "var(--blue)" },
-  { name: "TypeScript", issuer: "Synchem (Coursera)", date: "Feb 2025", accent: "var(--purple)" },
+  {
+    name: "Cursor AI",
+    issuer: "Great Learning",
+    date: "Apr 2026",
+    accent: "var(--blue)",
+    logo: "/logos/certs/great-learning.svg",
+  },
+  {
+    name: "Claude AI",
+    issuer: "Anthropic",
+    date: "Apr 2026",
+    accent: "var(--orange)",
+    logo: "/logos/certs/anthropic.svg",
+  },
+  {
+    name: "Generative AI: Introduction and Applications",
+    issuer: "IBM",
+    date: "Feb 2026",
+    accent: "var(--blue)",
+    logo: "/logos/certs/ibm.svg",
+  },
+  {
+    name: "React.js Developer Certification",
+    issuer: "LearnTube.ai",
+    date: "Feb 2026",
+    accent: "var(--green)",
+    logo: "/logos/certs/react.svg",
+  },
+  {
+    name: "Fundamentals of Docker & Kubernetes",
+    issuer: "Scaler Academy",
+    date: "Jun 2025",
+    accent: "var(--blue)",
+    logo: "/logos/certs/docker.svg",
+  },
+  {
+    name: "Typescript",
+    issuer: "Synechron Technologies Pvt Ltd",
+    date: "Feb 2025",
+    accent: "var(--purple)",
+    logo: "/logos/certs/typescript.svg",
+  },
+  {
+    name: "React with Redux",
+    issuer: "Synechron Technologies Pvt Ltd",
+    date: "Jan 2025",
+    accent: "var(--blue)",
+    logo: "/logos/certs/redux.svg",
+  },
+  {
+    name: "javascript - Marathon Interview Questions Series 2024",
+    issuer: "Udemy",
+    date: "Jan 2025",
+    accent: "var(--yellow)",
+    logo: "/logos/certs/udemy.svg",
+  },
+  {
+    name: "70+ JavaScript Challenges: Data Structures and Algorithms",
+    issuer: "Udemy",
+    date: "Jan 2025",
+    accent: "var(--green)",
+    logo: "/logos/certs/udemy.svg",
+  },
+  {
+    name: "GitLab CI/CD: Pipelines, CI/CD and DevOps for Beginners",
+    issuer: "Udemy",
+    date: "Jan 2025",
+    accent: "var(--purple)",
+    logo: "/logos/certs/udemy.svg",
+  },
+  {
+    name: "Development Software Engineering React JS Advanced React For Enterprise: React for senior engineers",
+    issuer: "Udemy",
+    date: "Jan 2025",
+    accent: "var(--orange)",
+    logo: "/logos/certs/udemy.svg",
+  },
 ];

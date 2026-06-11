@@ -12,7 +12,9 @@ export default function Certifications() {
         {certifications.map(c => (
           <div key={c.name} className={styles.certCard} style={{ borderTopColor: c.accent }}>
             <div className={styles.certBody}>
-              <div className={styles.certBadge}>✅</div>
+              <div className={styles.certLogoWrap}>
+                <img src={c.logo} alt="" className={styles.certLogo} aria-hidden="true" />
+              </div>
               <div className={styles.certName}>{c.name}</div>
               <div className={styles.certIssuer}>{c.issuer}</div>
               <div className={styles.certDate} style={{ color: c.accent }}>{c.date}</div>

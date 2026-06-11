@@ -1,9 +1,8 @@
 import PageWrapper from '../../components/common/PageWrapper'
 import Seo from '../../components/common/Seo'
 import ExperienceDurationValue from '../../components/common/ExperienceDurationValue'
-import { aboutCopy, aboutStats, strengths, whatIDo } from '../../data/about'
+import { aboutCopy, aboutStats, whatIDo } from '../../data/about'
 import { labels } from '../../data/labels'
-import shared from '../../styles/common/shared.module.css'
 import styles from './About.module.css'
 
 export default function About() {
@@ -41,21 +40,6 @@ export default function About() {
             <div className={styles.whatIcon}>{w.icon}</div>
             <div className={styles.whatTitle}>{w.title}</div>
             <div className={styles.whatDesc}>{w.desc}</div>
-          </div>
-        ))}
-      </div>
-
-      <div className={styles.sectionHeading}>{labels.coreStrengths}</div>
-      <div className={styles.strengthsGrid}>
-        {strengths.map(s => (
-          <div key={s.label} className={shared.strengthItem}>
-            <div className={shared.strengthLabelRow}>
-              <span>{s.label}</span>
-              <span className={shared.strengthPct}>{s.pct}%</span>
-            </div>
-            <div className={shared.strengthBar}>
-              <div className={shared.strengthFill} style={{ width: `${s.pct}%` }} />
-            </div>
           </div>
         ))}
       </div>

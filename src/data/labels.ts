@@ -5,7 +5,6 @@ export const labels = {
   viewAllProjects: "View all projects →",
   viewCaseStudy: "View Case Study →",
   readCaseStudy: "Read Case Study →",
-  viewAllArticles: "View all articles →",
   viewAllOnLinkedIn: "View all on LinkedIn →",
   viewLinkedIn: "View LinkedIn →",
   sendMessage: "Send Message →",

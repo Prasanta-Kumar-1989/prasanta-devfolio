@@ -1,8 +1,3 @@
-export interface Strength {
-  label: string;
-  pct: number;
-}
-
 export interface WhatIDoItem {
   icon: string;
   title: string;
@@ -33,15 +28,6 @@ export const aboutStats: StatItem[] = [
   { value: "3+", label: "Developers Mentored", color: "var(--green)" },
 ];
 
-export const strengths: Strength[] = [
-  { label: "Problem Solving", pct: 95 },
-  { label: "System Design", pct: 90 },
-  { label: "Performance Optimization", pct: 92 },
-  { label: "Clean Code & Best Practices", pct: 95 },
-  { label: "Agile Collaboration", pct: 90 },
-  { label: "Leadership & Mentoring", pct: 90 },
-];
-
 export const whatIDo: WhatIDoItem[] = [
   {
     icon: "⚙️",
@@ -51,21 +37,36 @@ export const whatIDo: WhatIDoItem[] = [
   {
     icon: "🔮",
     title: "System Design",
-    desc: "Scalable architecture, microservices & API integration",
+    desc: "Scalable architecture, microservices, API integration & maintainable frontend design",
   },
   {
     icon: "⚡",
     title: "Performance Optimization",
-    desc: "Core web vitals, lazy loading & code splitting",
+    desc: "Core web vitals, lazy loading, code splitting & fast experiences at scale",
   },
   {
     icon: "👥",
-    title: "Team Leadership",
-    desc: "Mentoring, code reviews & standards & best practices",
+    title: "Leadership & Mentoring",
+    desc: "Mentoring, code reviews, engineering standards & guiding teams to raise the bar",
   },
   {
     icon: "🤖",
     title: "AI Assisted Development",
     desc: "Cursor AI, Copilot & Claude AI for productivity",
+  },
+  {
+    icon: "🧩",
+    title: "Problem Solving",
+    desc: "Breaking down complex challenges into practical solutions",
+  },
+  {
+    icon: "✨",
+    title: "Clean Code & Best Practices",
+    desc: "Readable code, patterns, testing & consistent standards",
+  },
+  {
+    icon: "🤝",
+    title: "Agile Collaboration",
+    desc: "Sprint planning, cross-team communication & delivery",
   },
 ];
