@@ -1,7 +1,7 @@
 import PageWrapper from '../../components/common/PageWrapper'
 import Seo from '../../components/common/Seo'
 import ExperienceDurationValue from '../../components/common/ExperienceDurationValue'
-import { aboutCopy, aboutStats, strengthCards, whatIDo } from '../../data/about'
+import { aboutCopy, aboutStats, whatIDo } from '../../data/about'
 import { labels } from '../../data/labels'
 import styles from './About.module.css'
 
@@ -36,15 +36,6 @@ export default function About() {
       <div className={styles.sectionHeading}>{labels.whatIDo}</div>
       <div className={styles.whatGrid}>
         {whatIDo.map(w => (
-          <div key={w.title} className={styles.whatCard}>
-            <div className={styles.whatIcon}>{w.icon}</div>
-            <div className={styles.whatTitle}>{w.title}</div>
-            <div className={styles.whatDesc}>{w.desc}</div>
-          </div>
-        ))}
-      </div>
-      <div className={styles.whatGridSecondary}>
-        {strengthCards.map(w => (
           <div key={w.title} className={styles.whatCard}>
             <div className={styles.whatIcon}>{w.icon}</div>
             <div className={styles.whatTitle}>{w.title}</div>

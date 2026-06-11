@@ -37,40 +37,27 @@ export const whatIDo: WhatIDoItem[] = [
   {
     icon: "🔮",
     title: "System Design",
-    desc: "Scalable architecture, microservices & API integration",
+    desc: "Scalable architecture, microservices, API integration & maintainable frontend design",
   },
   {
     icon: "⚡",
     title: "Performance Optimization",
-    desc: "Core web vitals, lazy loading & code splitting",
+    desc: "Core web vitals, lazy loading, code splitting & fast experiences at scale",
   },
   {
     icon: "👥",
-    title: "Team Leadership",
-    desc: "Mentoring, code reviews & standards & best practices",
+    title: "Leadership & Mentoring",
+    desc: "Mentoring, code reviews, engineering standards & guiding teams to raise the bar",
   },
   {
     icon: "🤖",
     title: "AI Assisted Development",
     desc: "Cursor AI, Copilot & Claude AI for productivity",
   },
-];
-
-export const strengthCards: WhatIDoItem[] = [
   {
     icon: "🧩",
     title: "Problem Solving",
     desc: "Breaking down complex challenges into practical solutions",
-  },
-  {
-    icon: "🏗️",
-    title: "System Design",
-    desc: "Designing scalable, maintainable frontend architecture",
-  },
-  {
-    icon: "🚀",
-    title: "Performance Optimization",
-    desc: "Delivering fast, efficient experiences at scale",
   },
   {
     icon: "✨",
@@ -81,10 +68,5 @@ export const strengthCards: WhatIDoItem[] = [
     icon: "🤝",
     title: "Agile Collaboration",
     desc: "Sprint planning, cross-team communication & delivery",
-  },
-  {
-    icon: "🎯",
-    title: "Leadership & Mentoring",
-    desc: "Guiding teams, sharing knowledge & raising the bar",
   },
 ];
