@@ -318,6 +318,11 @@
   transition: background 0.15s;
 }
 
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 .formStatus {
   text-align: center;
   font-size: var(--fs-base);

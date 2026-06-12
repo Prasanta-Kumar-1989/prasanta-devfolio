@@ -16,8 +16,12 @@ export const contactCopy = {
   ctaTitle: "Let's build something amazing together! 🚀",
   ctaDesc: "Open to full-time roles, freelance projects and tech collaborations.",
   errorRequired: "Please fill in Name, Email, and Message.",
+  errorSubmit: "Something went wrong. Please try again or email me directly.",
+  sendingMessage: "Sending…",
   successMessage: "✓ Message sent! I'll get back to you soon.",
 };
+
+export const contactFormName = "contact";
 
 export const contactInfo: ContactInfoItem[] = [
   {
@@ -30,7 +34,7 @@ export const contactInfo: ContactInfoItem[] = [
     icon: "phone",
     label: "Phone",
     value: profile.phone,
-    link: `tel:${profile.phone.replace(/-/g, "")}`,
+    link: `tel:${profile.phoneTel}`,
   },
   {
     icon: "location",
