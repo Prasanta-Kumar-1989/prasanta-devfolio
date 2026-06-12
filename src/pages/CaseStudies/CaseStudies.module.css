@@ -31,18 +31,6 @@
 .caseTitle {
   font-size: var(--fs-md);
   font-weight: 700;
-  margin-bottom: 12px;
-}
-.casePreview {
-  height: 130px;
-  background: var(--bg3);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--fs-sm);
-  color: var(--text3);
 }
 .caseBody {
   padding: 18px;

@@ -16,7 +16,7 @@ export const aboutCopy = {
   heroTitle: "Crafting Scalable Web Solutions",
   heroHighlight: "That Drive Real Business Impact",
   paragraph1:
-    "Senior Frontend Engineer with 8+ years of experience delivering enterprise-grade React/JS applications for Fortune 1 clients including Walmart Global Tech and American Express.",
+    "Senior MERN Stack Engineer with 8+ years of experience delivering enterprise-grade React/JS applications for Fortune 1 clients including Walmart Global Tech and American Express.",
   paragraph2:
     "Proficient in TypeScript, Redux, GraphQL, Node.js and modern frontend tooling. Passionate about building scalable, maintainable and great user experiences.",
 };
@@ -25,7 +25,7 @@ export const aboutStats: StatItem[] = [
   { value: "", label: "Years of Experience", color: "var(--green)", dynamic: "experience" },
   { value: "Fortune 1", label: "Client Experience", color: "var(--blue)" },
   { value: "Millions", label: "Users impacted", color: "var(--green)" },
-  { value: "3+", label: "Developers Mentored", color: "var(--green)" },
+  { value: "13+", label: "Developers Mentored", color: "var(--green)" },
 ];
 
 export const whatIDo: WhatIDoItem[] = [

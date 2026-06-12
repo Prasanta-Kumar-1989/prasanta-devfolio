@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { projects } from '../../data/projects'
 import { profile, heroSkills, linkedInMetrics, trustedCompanies } from '../../data/profile'
+import { downloadResume } from '../../utils/downloadResume'
 import { homeCopy } from '../../data/home'
 import { labels } from '../../data/labels'
 import Tag from '../../components/common/Tag'
@@ -33,7 +34,9 @@ export default function Home() {
             ))}
           </div>
           <div className={styles.actionRow}>
-            <button className={styles.primaryButton}>{labels.downloadResume}</button>
+            <button type="button" className={styles.primaryButton} onClick={downloadResume}>
+              {labels.downloadResume}
+            </button>
             <button className={styles.secondaryButton} onClick={() => navigate('/contact')}>
               {labels.contactMe}
             </button>
