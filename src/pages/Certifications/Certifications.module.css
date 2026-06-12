@@ -22,16 +22,24 @@
 .certBody {
   padding: 16px;
 }
+.certHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
 .certLogoWrap {
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 52px;
   background: var(--bg3);
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
-  padding: 6px;
+  flex-shrink: 0;
+  padding: 4px;
+  overflow: hidden;
 }
 .certLogo {
   width: 100%;
@@ -47,11 +55,12 @@
 .certIssuer {
   font-size: var(--fs-sm);
   color: var(--text2);
-  margin-bottom: 6px;
 }
 .certDate {
   font-size: var(--fs-sm);
   font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
 }
 
 @media (max-width: 1024px) {

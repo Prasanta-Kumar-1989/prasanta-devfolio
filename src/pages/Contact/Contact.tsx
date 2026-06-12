@@ -2,7 +2,7 @@ import { useState } from 'react'
 import PageWrapper from '../../components/common/PageWrapper'
 import Seo from '../../components/common/Seo'
 import ContactInfoIcon from '../../components/common/ContactInfoIcon'
-import { contactCopy, contactInfo, formFields } from '../../data/contact'
+import { contactCopy, contactFormName, contactInfo, formFields } from '../../data/contact'
 import { labels } from '../../data/labels'
 import shared from '../../styles/common/shared.module.css'
 import styles from './Contact.module.css'
@@ -10,19 +10,47 @@ import styles from './Contact.module.css'
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', company: '', subject: '', message: '' })
   const [status, setStatus] = useState<{ type: 'success' | 'error'; msg: string } | null>(null)
+  const [submitting, setSubmitting] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!form.name || !form.email || !form.message) {
       setStatus({ type: 'error', msg: contactCopy.errorRequired })
       return
     }
-    setStatus({ type: 'success', msg: contactCopy.successMessage })
-    setForm({ name: '', email: '', company: '', subject: '', message: '' })
-    setTimeout(() => setStatus(null), 4000)
+
+    setSubmitting(true)
+    setStatus(null)
+
+    try {
+      const body = new URLSearchParams({
+        'form-name': contactFormName,
+        name: form.name,
+        email: form.email,
+        company: form.company,
+        subject: form.subject,
+        message: form.message,
+      })
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+      })
+
+      if (!response.ok) throw new Error('Form submission failed')
+
+      setStatus({ type: 'success', msg: contactCopy.successMessage })
+      setForm({ name: '', email: '', company: '', subject: '', message: '' })
+      setTimeout(() => setStatus(null), 4000)
+    } catch {
+      setStatus({ type: 'error', msg: contactCopy.errorSubmit })
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -58,16 +86,30 @@ export default function Contact() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className={styles.formCard}>
+        <form
+          name={contactFormName}
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+          className={styles.formCard}
+        >
+          <input type="hidden" name="form-name" value={contactFormName} />
+          <p className={styles.honeypot} aria-hidden="true">
+            <label>
+              Don&apos;t fill this out:
+              <input name="bot-field" tabIndex={-1} autoComplete="off" />
+            </label>
+          </p>
           <div className={styles.formTitle}>{labels.sendAMessage}</div>
           <div className={shared.formGrid}>
             <div>
               <label className={shared.formLabel}>{formFields.name.label}</label>
-              <input name="name" value={form.name} onChange={handleChange} placeholder={formFields.name.placeholder} className={shared.formInput} />
+              <input name="name" value={form.name} onChange={handleChange} placeholder={formFields.name.placeholder} className={shared.formInput} required />
             </div>
             <div>
               <label className={shared.formLabel}>{formFields.email.label}</label>
-              <input name="email" type="email" value={form.email} onChange={handleChange} placeholder={formFields.email.placeholder} className={shared.formInput} />
+              <input name="email" type="email" value={form.email} onChange={handleChange} placeholder={formFields.email.placeholder} className={shared.formInput} required />
             </div>
           </div>
           <div className={shared.formField}>
@@ -80,9 +122,11 @@ export default function Contact() {
           </div>
           <div className={shared.formFieldLg}>
             <label className={shared.formLabel}>{formFields.message.label}</label>
-            <textarea name="message" value={form.message} onChange={handleChange} placeholder={formFields.message.placeholder} rows={5} className={shared.formTextarea} />
+            <textarea name="message" value={form.message} onChange={handleChange} placeholder={formFields.message.placeholder} rows={5} className={shared.formTextarea} required />
           </div>
-          <button type="submit" className={shared.submitButton}>{labels.sendMessage}</button>
+          <button type="submit" className={shared.submitButton} disabled={submitting}>
+            {submitting ? contactCopy.sendingMessage : labels.sendMessage}
+          </button>
           {status && (
             <div className={`${shared.formStatus} ${status.type === 'success' ? shared.formStatusSuccess : shared.formStatusError}`}>
               {status.msg}
