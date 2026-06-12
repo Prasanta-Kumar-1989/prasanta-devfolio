@@ -44,7 +44,7 @@ export const caseStudies: CaseStudy[] = [
       "Architected scalable notification system handling Email, SMS & Push notifications with high availability.",
     metrics: [
       { value: "Millions", label: "Users Served" },
-      { value: "3", label: "Channels Unified" },
+      { value: "13", label: "Developers Mentored" },
       { value: "99.8%", label: "Uptime" },
     ],
   },

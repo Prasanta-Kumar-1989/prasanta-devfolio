@@ -2,7 +2,7 @@ export const profile = {
   firstName: "PRASANTA",
   lastName: "KUMAR SITHA",
   initials: "PKS",
-  title: "Senior Frontend Engineer",
+  title: "Senior MERN Stack Engineer",
   greeting: "Hello, I'm",
   summary:
     "Building enterprise-grade React applications for Fortune 1 companies. Passionate about scalable, maintainable and performant apps.",
@@ -15,7 +15,7 @@ export const profile = {
   linkedinHandle: "linkedin.com/in/prasantakumarsitha",
   githubHandle: "github.com/pksitha1989",
   photoUrl: "/profile.png",
-  photoAlt: "Prasanta Kumar Sitha — Senior Frontend Engineer",
+  photoAlt: "Prasanta Kumar Sitha — Senior MERN Stack Engineer",
 };
 
 export const heroSkills = [
@@ -46,22 +46,5 @@ export const trustedCompanies: TrustedCompany[] = [
   { name: "BORN", logo: "/logos/born-group.png" },
 ];
 
-export const resumeContent = `Prasanta Kumar Sitha - Senior Frontend Engineer
-
-Email: pksitha1989@gmail.com | Phone: +91-9728072191
-Location: Bangalore, Karnataka, India
-LinkedIn: linkedin.com/in/prasantakumarsitha | GitHub: github.com/pksitha1989
-
-SUMMARY
-Senior Frontend Engineer with 8+ years experience building enterprise React applications for Fortune 1 companies.
-
-EXPERIENCE
-- Senior Software Engineer | Redolent Infotech (Client: Walmart Global Tech) | Apr 2025 – Jan 2026
-- Senior Associate Technology | Synechron Technologies (Client: American Express) | Aug 2024 – Feb 2025
-- Lead Frontend Developer | Infobahn Softworld (Client: Walmart Global Tech) | Oct 2018 – Aug 2024
-- Web / UI Developer | US Tech Solutions (Client: Prime Focus Technologies) | Apr 2018 – Oct 2018
-- UI Developer | Datamatics Global Services (Client: Born Group) | Nov 2017 – Apr 2018
-
-SKILLS: React, TypeScript, GraphQL, Redux, Node.js, Tailwind CSS, MongoDB, Jest`;
-
-export const resumeFilename = "Prasanta_Kumar_Sitha_Resume.txt";
+export const resumeUrl = "/resume/Prasanta_1989_Node_React.pdf";
+export const resumeDownloadName = "Prasanta_1989_Node_React.pdf";

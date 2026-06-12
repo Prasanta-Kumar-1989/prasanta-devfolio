@@ -37,7 +37,6 @@ export default function ProjectDetails() {
 
       <div className={styles.contentGrid}>
         <div>
-          <div className={styles.preview}>{labels.projectDashboardPreview}</div>
           <div className={shared.projectTags}>
             {project.tags.map(t => <Tag key={t} label={t} />)}
           </div>
@@ -101,11 +100,6 @@ export default function ProjectDetails() {
                   </div>
                 ))}
               </div>
-            </div>
-          )}
-          {activeTab === 'GALLERY' && (
-            <div className={styles.tabPanelEmpty}>
-              <div className={styles.tabPanelText}>{labels.galleryComingSoon}</div>
             </div>
           )}
         </div>

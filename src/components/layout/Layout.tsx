@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Outlet, NavLink, useLocation } from 'react-router-dom'
 import { navigation } from '../../data/navigation'
-import { profile, resumeContent, resumeFilename } from '../../data/profile'
+import { profile } from '../../data/profile'
+import { downloadResume } from '../../utils/downloadResume'
 import { labels } from '../../data/labels'
 import styles from './Layout.module.css'
 
@@ -17,16 +18,6 @@ export default function Layout() {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
-
-  const downloadResume = () => {
-    const blob = new Blob([resumeContent], { type: 'text/plain' })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = resumeFilename
-    a.click()
-    URL.revokeObjectURL(url)
-  }
 
   return (
     <div className={styles.shell}>

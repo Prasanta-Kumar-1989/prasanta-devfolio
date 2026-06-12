@@ -22,7 +22,6 @@ export default function CaseStudies() {
               <ClientLabel client={c.client} className={styles.caseClient} style={{ color: c.accent }} />
               <div className={styles.caseTitle}>{c.title}</div>
             </div>
-            <div className={styles.casePreview}>{labels.projectScreenshotPreview}</div>
             <div className={styles.caseBody}>
               <div className={styles.caseSection}>
                 <div className={styles.caseSectionTitle} style={{ color: c.accent }}>{labels.challenge}</div>
