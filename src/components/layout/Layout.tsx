@@ -4,6 +4,7 @@ import { navigation } from '../../data/navigation'
 import { profile } from '../../data/profile'
 import { downloadResume } from '../../utils/downloadResume'
 import { labels } from '../../data/labels'
+import TrustedBar from '../common/TrustedBar'
 import styles from './Layout.module.css'
 
 export default function Layout() {
@@ -85,9 +86,12 @@ export default function Layout() {
         </div>
       </aside>
 
-      <main className={styles.main}>
-        <Outlet />
-      </main>
+      <div className={styles.contentArea}>
+        <main className={styles.main}>
+          <Outlet />
+        </main>
+        <TrustedBar />
+      </div>
     </div>
   )
 }

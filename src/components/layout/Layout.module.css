@@ -148,16 +148,23 @@
   color: var(--green-dim);
 }
 
-.main {
+.contentArea {
   margin-left: var(--sidebar-w);
   margin-top: 0;
-  padding: 28px 32px;
   flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   height: 100vh;
   max-width: 100%;
-  min-width: 0;
+}
+
+.main {
+  flex: 1;
+  padding: 28px 32px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
 }
 
 @media (min-width: 1280px) {
@@ -165,7 +172,7 @@
     display: flex;
   }
 
-  .main {
+  .contentArea {
     margin-top: var(--topbar-h);
     height: calc(100vh - var(--topbar-h));
   }
@@ -250,11 +257,14 @@
     cursor: pointer;
   }
 
-  .main {
+  .contentArea {
     margin-left: 0;
     margin-top: var(--mobile-header-h);
-    padding: 16px;
     height: calc(100vh - var(--mobile-header-h));
+  }
+
+  .main {
+    padding: 16px;
   }
 }
 

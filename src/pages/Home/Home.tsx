@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom'
 import { projects } from '../../data/projects'
-import { profile, heroSkills, linkedInMetrics, trustedCompanies } from '../../data/profile'
+import { profile, heroSkills, linkedInMetrics } from '../../data/profile'
 import { downloadResume } from '../../utils/downloadResume'
 import { homeCopy } from '../../data/home'
 import { labels } from '../../data/labels'
 import Tag from '../../components/common/Tag'
 import ClientLabel from '../../components/common/ClientLabel'
+import CountUpMetric from '../../components/common/CountUpMetric'
 import PageWrapper from '../../components/common/PageWrapper'
 import Seo from '../../components/common/Seo'
 import shared from '../../styles/common/shared.module.css'
@@ -54,7 +55,12 @@ export default function Home() {
       <div className={styles.metricsGrid}>
         {linkedInMetrics.map(m => (
           <div key={m.label} className={styles.metricCard}>
-            <div className={styles.metricValue}>{m.value}</div>
+            <CountUpMetric
+              target={m.target}
+              suffix={m.suffix}
+              useComma={m.useComma}
+              className={styles.metricValue}
+            />
             <div className={styles.metricLabel}>{m.label}</div>
           </div>
         ))}
@@ -84,17 +90,6 @@ export default function Home() {
             <span className={styles.projectView}>{labels.viewCaseStudy}</span>
           </div>
         ))}
-      </div>
-
-      <div className={styles.trustedBar}>
-        <p className={styles.trustedLabel}>{labels.trustedBy}</p>
-        <div className={styles.trustedLogos}>
-          {trustedCompanies.map(c => (
-            <div key={c.name} className={styles.trustedLogoItem} title={c.name}>
-              <img src={c.logo} alt={c.name} className={styles.trustedLogo} />
-            </div>
-          ))}
-        </div>
       </div>
     </PageWrapper>
   )

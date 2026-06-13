@@ -5,7 +5,7 @@ export interface NavItem {
 }
 
 export const navigation: NavItem[] = [
-  { label: "Home Page", path: "/", topLabel: "INTRO" },
+  { label: "Intro", path: "/", topLabel: "INTRO" },
   { label: "About Me", path: "/about", topLabel: "ABOUT ME" },
   { label: "Projects", path: "/projects", topLabel: "PROJECTS" },
   { label: "Skills", path: "/skills", topLabel: "SKILLS" },
