@@ -6,6 +6,7 @@ import { homeCopy } from '../../data/home'
 import { labels } from '../../data/labels'
 import Tag from '../../components/common/Tag'
 import ClientLabel from '../../components/common/ClientLabel'
+import CountUpMetric from '../../components/common/CountUpMetric'
 import PageWrapper from '../../components/common/PageWrapper'
 import Seo from '../../components/common/Seo'
 import shared from '../../styles/common/shared.module.css'
@@ -54,7 +55,12 @@ export default function Home() {
       <div className={styles.metricsGrid}>
         {linkedInMetrics.map(m => (
           <div key={m.label} className={styles.metricCard}>
-            <div className={styles.metricValue}>{m.value}</div>
+            <CountUpMetric
+              target={m.target}
+              suffix={m.suffix}
+              useComma={m.useComma}
+              className={styles.metricValue}
+            />
             <div className={styles.metricLabel}>{m.label}</div>
           </div>
         ))}

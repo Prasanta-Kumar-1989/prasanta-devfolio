@@ -1,5 +1,5 @@
 import { recommendations, recommendationsCopy } from '../../data/recommendations'
-import { profile, linkedInMetrics } from '../../data/profile'
+import { profile, linkedInMetrics, formatLinkedInMetric } from '../../data/profile'
 import { labels } from '../../data/labels'
 import PageWrapper from '../../components/common/PageWrapper'
 import Seo from '../../components/common/Seo'
@@ -38,7 +38,7 @@ export default function Recommendations() {
         <div className={styles.presenceStats}>
           {linkedInMetrics.map(m => (
             <div key={m.label} className={styles.presenceStat}>
-              <div className={styles.presenceValue}>{m.value}</div>
+              <div className={styles.presenceValue}>{formatLinkedInMetric(m)}</div>
               <div className={styles.presenceLabelSmall}>{m.label}</div>
             </div>
           ))}

@@ -29,11 +29,25 @@ export const heroSkills = [
   "JavaScript",
 ];
 
-export const linkedInMetrics = [
-  { value: "1,493", label: "Connections" },
-  { value: "500+", label: "Followers" },
-  { value: "3", label: "Recommendations" },
+export interface LinkedInMetric {
+  label: string;
+  target: number;
+  suffix?: string;
+  useComma?: boolean;
+}
+
+export const linkedInMetrics: LinkedInMetric[] = [
+  { label: "Connections", target: 1493, useComma: true },
+  { label: "Followers", target: 500, suffix: "+" },
+  { label: "Recommendations", target: 3 },
 ];
+
+export function formatLinkedInMetric(metric: LinkedInMetric) {
+  const formatted = metric.useComma
+    ? metric.target.toLocaleString("en-US")
+    : String(metric.target);
+  return `${formatted}${metric.suffix ?? ""}`;
+}
 
 export interface TrustedCompany {
   name: string;

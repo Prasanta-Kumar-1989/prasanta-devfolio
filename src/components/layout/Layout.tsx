@@ -86,10 +86,12 @@ export default function Layout() {
         </div>
       </aside>
 
-      <main className={styles.main}>
-        <Outlet />
+      <div className={styles.contentArea}>
+        <main className={styles.main}>
+          <Outlet />
+        </main>
         <TrustedBar />
-      </main>
+      </div>
     </div>
   )
 }
