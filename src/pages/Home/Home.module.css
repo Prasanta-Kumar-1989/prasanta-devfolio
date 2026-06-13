@@ -190,55 +190,6 @@
   font-size: var(--fs-sm);
   color: var(--green);
 }
-.trustedBar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  text-align: center;
-}
-
-.trustedLabel {
-  font-size: var(--fs-sm);
-  color: var(--text3);
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.trustedLogos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  width: 100%;
-}
-
-.trustedLogoItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  min-height: auto;
-  min-width: auto;
-}
-
-.trustedLogo {
-  height: 48px;
-  width: auto;
-  max-width: 180px;
-  object-fit: contain;
-  display: block;
-}
 
 @media (max-width: 1024px) {
   .featuredProjectsGrid {
@@ -290,15 +241,6 @@
 
   .metricsGrid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .trustedLogos {
-    gap: 20px;
-  }
-
-  .trustedLogo {
-    height: 40px;
-    max-width: 150px;
   }
 }
 

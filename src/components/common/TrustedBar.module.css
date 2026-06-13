@@ -1,0 +1,76 @@
+.trustedBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 32px -32px -28px;
+  padding: 24px 32px 28px;
+  border-top: 1px solid var(--border);
+  background: var(--bg3);
+  text-align: center;
+}
+
+.trustedLabel {
+  font-size: var(--fs-sm);
+  color: var(--text3);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.trustedLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+}
+
+.trustedLogoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+}
+
+.trustedLogo {
+  height: 48px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .trustedBar {
+    margin: 32px -20px -24px;
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trustedBar {
+    margin: 24px -16px -16px;
+    padding: 20px 16px;
+  }
+
+  .trustedLogos {
+    gap: 20px;
+  }
+
+  .trustedLogo {
+    height: 40px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trustedBar {
+    margin: 24px -12px -14px;
+    padding: 20px 12px;
+  }
+}
