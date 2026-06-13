@@ -33,11 +33,6 @@ export default function Projects() {
             </div>
             <span className={styles.projectView}>{labels.viewCaseStudy}</span>
           </div>
-          <div className={styles.projectIcon}>
-            <svg className={styles.projectIconSvg} width="24" height="24" viewBox="0 0 24 24" fill="none" strokeWidth="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/>
-            </svg>
-          </div>
         </div>
       ))}
     </PageWrapper>
