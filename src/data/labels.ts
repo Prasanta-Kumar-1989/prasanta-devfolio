@@ -12,7 +12,6 @@ export const labels = {
   trustedBy: "Trusted by leading enterprises",
   featuredProjects: "⭐ FEATURED PROJECTS",
   moreRolesAtCompany: "More Roles at This Company",
-  dlResumeSidebar: "⬇ Download Resume",
   challenge: "Challenge",
   solution: "Solution",
   techStack: "TECH STACK",

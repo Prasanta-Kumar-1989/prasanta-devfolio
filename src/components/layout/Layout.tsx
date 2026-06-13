@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 import { Outlet, NavLink, useLocation } from 'react-router-dom'
 import { navigation } from '../../data/navigation'
 import { profile } from '../../data/profile'
-import { downloadResume } from '../../utils/downloadResume'
-import { labels } from '../../data/labels'
 import TrustedBar from '../common/TrustedBar'
 import styles from './Layout.module.css'
 
@@ -78,12 +76,6 @@ export default function Layout() {
             </NavLink>
           ))}
         </nav>
-
-        <div className={styles.sidebarFooter}>
-          <button type="button" className={styles.dlResume} onClick={downloadResume}>
-            {labels.dlResumeSidebar}
-          </button>
-        </div>
       </aside>
 
       <div className={styles.contentArea}>

@@ -126,28 +126,6 @@
   font-size: var(--fs-base);
 }
 
-.sidebarFooter {
-  padding: 14px 16px;
-  border-top: 1px solid var(--border);
-}
-
-.dlResume {
-  width: 100%;
-  padding: 8px 10px;
-  background: var(--bg2);
-  border: 1px solid var(--border2);
-  border-radius: 6px;
-  color: var(--text2);
-  font-size: var(--fs-sm);
-  text-align: center;
-  transition: all 0.15s;
-}
-
-.dlResume:hover {
-  border-color: var(--green);
-  color: var(--green-dim);
-}
-
 .contentArea {
   margin-left: var(--sidebar-w);
   margin-top: 0;
