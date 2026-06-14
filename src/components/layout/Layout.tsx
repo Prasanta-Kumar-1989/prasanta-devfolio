@@ -1,13 +1,17 @@
 import { useState, useEffect } from 'react'
 import { Outlet, NavLink, useLocation } from 'react-router-dom'
-import { navigation } from '../../data/navigation'
+import { navigation, getSidebarNavigation } from '../../data/navigation'
 import { profile } from '../../data/profile'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
 import TrustedBar from '../common/TrustedBar'
+import MobileBottomNav from './MobileBottomNav'
 import styles from './Layout.module.css'
 
 export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const isMobile = useMediaQuery('(max-width: 768px)')
+  const sidebarItems = getSidebarNavigation(isMobile)
 
   useEffect(() => {
     setMenuOpen(false)
@@ -21,6 +25,15 @@ export default function Layout() {
   return (
     <div className={styles.shell}>
       <header className={styles.mobileHeader}>
+        <div className={styles.mobileIdentity}>
+          <img
+            src={profile.photoUrl}
+            alt=""
+            className={styles.mobilePhoto}
+            aria-hidden="true"
+          />
+          <span className={styles.mobileName}>{profile.seoSiteName}</span>
+        </div>
         <button
           type="button"
           className={styles.menuBtn}
@@ -30,7 +43,6 @@ export default function Layout() {
         >
           {menuOpen ? '✕' : '☰'}
         </button>
-        <div className={styles.mobileLogo}>{profile.initials}</div>
       </header>
 
       {menuOpen && (
@@ -59,11 +71,15 @@ export default function Layout() {
 
       <aside className={`${styles.sidebar} ${menuOpen ? styles.sidebarOpen : ''}`}>
         <div className={styles.logoWrap}>
-          <div className={styles.logoBox}>{profile.initials}</div>
+          <img
+            src={profile.photoUrl}
+            alt={profile.photoAlt}
+            className={styles.sidebarPhoto}
+          />
         </div>
 
         <nav className={styles.navList} aria-label="Main navigation">
-          {navigation.map((item) => (
+          {sidebarItems.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
@@ -84,6 +100,8 @@ export default function Layout() {
         </main>
         <TrustedBar />
       </div>
+
+      <MobileBottomNav />
     </div>
   )
 }

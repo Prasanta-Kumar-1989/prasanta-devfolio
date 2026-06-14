@@ -75,20 +75,17 @@
 .logoWrap {
   padding: 16px;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
 }
 
-.logoBox {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--green);
-  color: var(--on-green);
-  font-weight: 800;
-  font-size: var(--fs-base);
-  border-radius: 6px;
-  letter-spacing: 0.5px;
+.sidebarPhoto {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--border);
 }
 
 .navList {
@@ -194,19 +191,38 @@
     border-radius: 6px;
     font-size: 18px;
     color: var(--text);
+    flex-shrink: 0;
+    margin-left: auto;
   }
 
-  .mobileLogo {
-    width: 32px;
-    height: 32px;
+  .mobileIdentity {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: var(--green);
-    color: var(--on-green);
-    font-weight: 800;
+    gap: 10px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .mobilePhoto {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 2px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .mobileName {
     font-size: var(--fs-sm);
-    border-radius: 6px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #15803d 0%, #16a34a 40%, #22c55e 55%, #2563eb 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .topbar {
@@ -238,10 +254,11 @@
   .contentArea {
     margin-left: 0;
     margin-top: var(--mobile-header-h);
-    height: calc(100vh - var(--mobile-header-h));
+    height: calc(100vh - var(--mobile-header-h) - var(--mobile-bottom-nav-h));
     display: block;
     overflow-y: auto;
     overflow-x: hidden;
+    padding-bottom: 8px;
   }
 
   .main {
